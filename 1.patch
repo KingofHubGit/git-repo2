@@ -1,0 +1,46 @@
+commit db0ef9ba56ba45607275a776180005cabec0b51c
+Author: Lucas.Deng <Lucas.Deng@datalogic.com>
+Date:   Wed Nov 1 10:49:25 2023 +0800
+
+    Sulution of fix the python2.7 and fix the url
+
+diff --git a/main.py b/main.py
+index be5e313..9b61277 100755
+--- a/main.py
++++ b/main.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2.7
+ #
+ # Copyright (C) 2008 The Android Open Source Project
+ #
+diff --git a/repo b/repo
+index f251a1d..3e0448d 100755
+--- a/repo
++++ b/repo
+@@ -1,12 +1,12 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2.7
+ 
+ # repo default configuration
+ #
+ import os
+ REPO_URL = os.environ.get('REPO_URL', None)
+ if not REPO_URL:
+-  REPO_URL = 'https://gerrit.googlesource.com/git-repo'
+-REPO_REV = 'stable'
++  REPO_URL = 'git@blqsrv819.dl.net:android-common-utils/git-repo.git'
++REPO_REV = 'master'
+ 
+ # Copyright (C) 2008 Google Inc.
+ #
+diff --git a/wrapper.py b/wrapper.py
+index e7e276e..535f29f 100644
+--- a/wrapper.py
++++ b/wrapper.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2.7
+ #
+ # Copyright (C) 2014 The Android Open Source Project
+ #
